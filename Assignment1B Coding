@@ -1,0 +1,24 @@
+package assignment;
+
+import java.util.Scanner;
+public class assignment1B {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("Enter yearly interest rate: ");
+		double interestRate = scan.nextDouble();
+		System.out.println("Enter number of years: ");
+		int years = scan.nextInt();
+		System.out.println("Enter loan amount: $");
+		double loan = scan.nextDouble();
+		
+		double monthlypayment = interestRate*loan/100;
+		System.out.printf("The monthly payment is: $%.2f%n" , monthlypayment );
+		double total = monthlypayment*12*years;
+		System.out.printf("The total payment is: $%.2f%n" , total );
+	}
+
+}
